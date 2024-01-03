@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes App</title>
+    <style>
+        body {
+            font-family: 'Snell Roundhand', cursive;
+            text-align: center;
+            margin: 50px;
+            background-color: #e26e6e81;
+        }
+        h1 {
+            color: #302b2b;
+        }
+        #quote {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+        #nextButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #781515;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+        #nextButton:hover {
+            background-color: #08629d;
+        }
+    </style>
+</head>
+<body>
+    <h1>_MyQuo_</h1>
+    <div id="quote"></div>
+    <button id="nextButton">Next Quote</button>
+
+    <script>
+        const quotes = [
+            "The only way to do great work is to love what you do. - Steve Jobs",
+            "Life is what happens when you're busy making other plans. - John Lennon",
+            "In three words I can sum up everything I've learned about life: it goes on. - Robert Frost",
+            "The future belongs to those who believe in the beauty of their dreams. - Eleanor Roosevelt",
+            "Don't count the days, make the days count. - Muhammad Ali",
+            "In three words I can sum up everything I've learned about life: it goes on. - Robert Frost",
+            "The future belongs to those who believe in the beauty of their dreams. - Eleanor Roosevelt",
+            "Don't count the days, make the days count. - Muhammad Ali",
+            "The best way to predict the future is to create it. - Peter Drucker",
+            "Success is not final, failure is not fatal: It is the courage to continue that counts. - Winston Churchill",
+            "Your time is limited, don't waste it living someone else's life. - Steve Jobs",
+            "The only limit to our realization of tomorrow will be our doubts of today. - Franklin D. Roosevelt",
+            "The purpose of our lives is to be happy. - Dalai Lama",
+            "The only thing we have to fear is fear itself. - Franklin D. Roosevelt",
+            "It is during our darkest moments that we must focus to see the light. - Aristotle",
+            "Do not wait to strike till the iron is hot, but make it hot by striking. - William Butler Yeats",
+            "Believe you can and you're halfway there. - Theodore Roosevelt",
+            "Life is 10% what happens to us and 90% how we react to it. - Charles R. Swindoll",
+            "The way to get started is to quit talking and begin doing. - Walt Disney",
+            "In the end, we will remember not the words of our enemies, but the silence of our friends. - Martin Luther King Jr.",
+            "The only person you are destined to become is the person you decide to be. - Ralph Waldo Emerson",
+            "Be the change that you wish to see in the world. - Mahatma Gandhi",
+            "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment. - Ralph Waldo Emerson"
+            // Add more quotes as needed
+        ];
+
+        const quoteElement = document.getElementById('quote');
+        const nextButton = document.getElementById('nextButton');
+
+        function getRandomQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            const randomQuote = quotes[randomIndex];
+            quoteElement.textContent = randomQuote;
+        }
+
+        nextButton.addEventListener('click', getRandomQuote);
+
+        // Initial quote display
+        getRandomQuote();
+    </script>
+</body>
+</html>
+
